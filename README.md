@@ -1,9 +1,6 @@
 
+# iris-mlm-explainer
 ![](https://github.com/mwaseem75/iris-mlm-explorer/blob/main/irisMLMExp.gif)
-
-# isc-cloud-sql-python-demo
-
-This is an example of a very simple python-flask application, which works with InterSystems IRIS Cloud SQL server.
 
 ## Prerequisits
 You should create account with InterSystems Cloud SQL and have the name of the host and password for SQLAdmin user.
