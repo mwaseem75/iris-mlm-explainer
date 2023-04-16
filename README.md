@@ -8,7 +8,10 @@ You should have git installed locally. If not, [here is](https://git-scm.com/boo
 you should have Python3 installed locally. Here is [how to install](https://www.python.org/downloads/) if not.
 
 ## Running app locally 
-1. Git clone the repository.
+1. Clone/git pull the repo into any local directory
+```
+https://github.com/mwaseem75/iris-mlm-explainer.git
+```
 2. Activate python environment venv:
 Open terminal in the repository folder and call:
 ```
