@@ -1,0 +1,23 @@
+
+![](https://github.com/mwaseem75/iris-mlm-explorer/blob/main/irisMLMExp.gif)
+
+# isc-cloud-sql-python-demo
+
+This is an example of a very simple python-flask application, which works with InterSystems IRIS Cloud SQL server.
+
+## Prerequisits
+You should create account with InterSystems Cloud SQL and have the name of the host and password for SQLAdmin user.
+You should have git installed locally. If not, [here is](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) where you can make it.
+you should have Python3 installed locally. Here is [how to install](https://www.python.org/downloads/) if not.
+
+## Running app locally 
+1. Git clone the repository.
+2. Activate python environment venv:
+Open terminal in the repository folder and call:
+```
+$ source venv/bin/activate
+```
+3. Run application
+```
+$ python3 expdash.py
+```
