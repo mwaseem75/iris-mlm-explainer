@@ -22,7 +22,7 @@ for i in range(len(data)):
     #if Model type is regression
     if data2[0][0] == 'regression':
         #explainer = RegressionExplainer(RandomForestClassifier().fit(X_train, y_train), X_test, y_test)
-        #X_train, y_train, X_test, y_test = utility.get_model_train_test(data[i][2],data[i][3])
+        X_train, y_train, X_test, y_test = utility.get_model_train_test(data[i][2],data[i][3])
         #X_train, y_train, X_test, y_test = utility.get_model_train_test("SELECT top 100 * FROM  SQLUser . yellow_tripdata_train",data[i][3])
         #X_train = X_train.drop(columns=['store_and_fwd_flag'])
         #X_test = X_test.drop(columns=['store_and_fwd_flag'])   
@@ -37,7 +37,7 @@ for i in range(len(data)):
         #y_test.to_csv("y_test.csv")
         
         #Get train and test data
-        X_train, y_train, X_test, y_test = titanic_fare()
+        #X_train, y_train, X_test, y_test = titanic_fare()
         #X_train._convert(convert_numeric=True).dropna()
         #X_train2 = X_train.drop(columns=['store_and_fwd_flag'])
         #encoder = OrdinalEncoder()
@@ -51,9 +51,9 @@ for i in range(len(data)):
         dblst.append(ExplainerDashboard(explainer,title="Model : "+data[i][0], name="db"+ str(i+1),description=data[i][1]+", Training Query : "+data[i][2]))
     #If Model type is classification
     elif data2[0][0] == 'classification':
-        #X_train, y_train, X_test, y_test = utility.get_model_train_test(data[i][2],data[i][3])
+        X_train, y_train, X_test, y_test = utility.get_model_train_test(data[i][2],data[i][3])
         #Get train and test data
-        X_train, y_train, X_test, y_test = titanic_survive()
+        #X_train, y_train, X_test, y_test = titanic_survive()
         encoder = OrdinalEncoder()
         X_train = encoder.fit_transform(X_train)
         #Initiate explainer 
