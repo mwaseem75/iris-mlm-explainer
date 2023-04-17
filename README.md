@@ -118,18 +118,25 @@ Navigate to [http://localhost:8050/](http://localhost:8050/) to run the applicat
 
 Application will list our USAHousingPriceModel. Navigate to "go to dashboard" hyperlink to view model explainer
 
+Feature Importances. Which features had the biggest impact?
 ![image](https://user-images.githubusercontent.com/18219467/232486985-1719d884-295c-4521-a5cd-85ac034eded9.png)
 
+Quantitative metrics for model performance, How close is the predicted value to the observed?
 ![image](https://user-images.githubusercontent.com/18219467/232487163-cbaceee4-54c7-4b7e-a3c7-c775cb873419.png)
 
+Prediction and How has each feature contributed to the prediction?
 ![image](https://user-images.githubusercontent.com/18219467/232487390-81a06116-ac72-495c-9b1d-be117f69ff08.png)
 
+Adjust the feature values to change the prediction
 ![image](https://user-images.githubusercontent.com/18219467/232487500-0c772ce6-b665-40ab-8316-ee5cdf43f3c7.png)
 
+Shap Summary, Ordering features by shap value
 ![image](https://user-images.githubusercontent.com/18219467/232487656-d2a5bf90-c09b-45b0-b05c-0a1f6570d2cb.png)
 
+Interactions Summary,Ordering features by shap interaction value
 ![image](https://user-images.githubusercontent.com/18219467/232487941-c9f4b9a3-d727-4895-887a-68b825a2bb6b.png)
 
+Decision Trees, Displaying individual decision trees inside Random Forest
 ![image](https://user-images.githubusercontent.com/18219467/232488582-99b93bb2-5017-4670-a85b-27d19860cc92.png)
 
 
