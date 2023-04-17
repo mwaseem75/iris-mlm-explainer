@@ -81,4 +81,29 @@ NOTE : Run the cells in sequance by just clicking small arrow
 ![image](https://user-images.githubusercontent.com/18219467/232431439-8aaa7eac-900b-4cc8-9cca-ec6a44bb7920.png)
 
 ## Step 5 : Explore USA housing (for USA housing price Prediction)
+![image](https://user-images.githubusercontent.com/18219467/232433366-f3457c94-1272-4613-8c06-37e4d107d07c.png)
 
+## Step 6 : Create table and import data
+![image](https://user-images.githubusercontent.com/18219467/232434992-f519049b-2278-4e07-adbf-13fa35457bbd.png)
+
+## Step 7 : Create Model
+![image](https://user-images.githubusercontent.com/18219467/232435694-7986ab85-1e49-4f1d-b7dc-95259c162206.png)
+
+## Step 8 : Train Model
+![image](https://user-images.githubusercontent.com/18219467/232435922-2f84b59e-0f92-427c-b508-5e733353eadf.png)
+
+## Step 9 : Validate Model
+![image](https://user-images.githubusercontent.com/18219467/232436161-c7af4e06-8a70-4d2d-a0e9-3e90814d7051.png)
+![image](https://user-images.githubusercontent.com/18219467/232436385-9df76a7c-fc0f-46d8-b5bf-3c062cc2b7e6.png)
+
+## Step 10 : Do Prediction
+![image](https://user-images.githubusercontent.com/18219467/232437235-7ba99b14-3f72-47ab-b644-fd995c37cca8.png)
+
+## Step 11 : Explore Explainer dashboard
+Finally run the below command in virual environment to start our main application
+```
+python expdash.py
+```
+![image](https://user-images.githubusercontent.com/18219467/232438579-26fc0a30-9f95-4df1-81ef-7f24270316c5.png)
+
+Thanks
