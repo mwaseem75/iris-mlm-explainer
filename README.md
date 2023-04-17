@@ -106,4 +106,7 @@ python expdash.py
 ```
 ![image](https://user-images.githubusercontent.com/18219467/232438579-26fc0a30-9f95-4df1-81ef-7f24270316c5.png)
 
+## Credits
+This application is derived from the [isc-cloud-sql-python-demo](https://openexchange.intersystems.com/package/isc-cloud-sql-python-demo) template by @Evgeny Shvarov
+
 Thanks
