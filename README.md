@@ -54,6 +54,7 @@ venv\scripts\activate
 ## Step 3 : Set InterSystems Cloud SQL connection parameters
 Repo contains config.py file. Just open and set the parameters
 ![image](https://user-images.githubusercontent.com/18219467/232424168-3fd4ce14-2a78-44bc-a42b-c65909d9696a.png)
+
 Put same values used in InterSystems Cloud SQL
 ![image](https://user-images.githubusercontent.com/18219467/232485432-4b100781-1127-45b0-b3d8-95570124d977.png)
 
