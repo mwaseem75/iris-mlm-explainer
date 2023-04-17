@@ -112,7 +112,7 @@ Navigate to [http://localhost:8050/](http://localhost:8050/) to run the applicat
 
 ![image](https://user-images.githubusercontent.com/18219467/232479136-c97c7678-9c41-4a5e-bd21-baa38580ac68.png)
 
-Application will list all the trained model. Navigate to go to dashboard hyperlink to view model explainer
+Application will list all the trained models. Navigate to "go to dashboard" hyperlink to view model explainer
 
 ![image](https://user-images.githubusercontent.com/18219467/232479663-2800d973-0210-4a06-9dfb-e3169d11697a.png)
 
