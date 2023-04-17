@@ -12,18 +12,35 @@ The dashboard includes:
 - Plus for classifiers: precision plots, confusion matrix, ROC AUC plot, PR AUC plot, etc
 - For regression models: goodness-of-fit plots, residual plots, etc.
 
-## Prerequisits
+# Prerequisits
 - You should have account with [InterSystems Cloud SQL](https://portal.sql-contest.isccloud.io/cloudservices). 
 - You should have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed locally.
 - You should have [Python3](https://www.python.org/downloads/) installed locally. 
 
-## Running app locally 
-1. Clone/git pull the repo into any local directory
+# Getting Started
+We will follow the below steps to create and view explainer dashboard of a model :
+- Step 1 : Close/git Pull the repo
+- Step 2 : Activate python virtual environment 
+- Step 3 : Set InterSystems Cloud SQL parameters
+- Step 4 : Explore USA housing (for USA housing price Prediction)
+- Step 5 : Create table and import data
+- Step 6 : Create Model
+- Step 7 : Train Model
+- Step 8 : Validate Model
+- Step 9 : Do Prediction
+- Step 10 : Explore Explainer dashboard
+
+## Step 1 : Close/git Pull the repo
+So Let us start with first Step
+
+Create folder and Clone/git pull the repo into any local directory
 ```
-https://github.com/mwaseem75/iris-mlm-explainer.git
+git clone https://github.com/mwaseem75/iris-mlm-explainer.git
 ```
-2. Activate python environment venv:
-Open terminal in the repository folder and call:
+
+## Step 2 : Activate python virtual environment 
+Repository already contains python virtual environment folder (venv) along with all the required libraries.
+All we need is to just activate the environment
 ```
 $ source venv/bin/activate
 ```
