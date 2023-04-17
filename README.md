@@ -105,6 +105,19 @@ Finaly, run the below command in virtual environment to start our main applicati
 python expdash.py
 ```
 ![image](https://user-images.githubusercontent.com/18219467/232438579-26fc0a30-9f95-4df1-81ef-7f24270316c5.png)
+![image](https://user-images.githubusercontent.com/18219467/232478449-557091da-3a7d-4534-bd0f-13c12e682e4c.png)
+![image](https://user-images.githubusercontent.com/18219467/232478562-70200f16-4161-4738-bf13-fd043a21d194.png)
+
+Navigate to [http://localhost:8050/](http://localhost:8050/) to run the application
+
+![image](https://user-images.githubusercontent.com/18219467/232479136-c97c7678-9c41-4a5e-bd21-baa38580ac68.png)
+
+Application will list all the trained model. Navigate to go to dashboard hyperlink to view model explainer
+
+![image](https://user-images.githubusercontent.com/18219467/232479663-2800d973-0210-4a06-9dfb-e3169d11697a.png)
+
+
+
 
 ## Credits
 This application is derived from the [isc-cloud-sql-python-demo](https://openexchange.intersystems.com/package/isc-cloud-sql-python-demo) template by @Evgeny Shvarov
