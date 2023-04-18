@@ -22,12 +22,20 @@ for i in range(len(data)):
     #if Model type is regression
     if data2[0][0] == 'regression':
         X_train, y_train, X_test, y_test = utility.get_model_train_test(data[i][2],data[i][3])
-        #Generate model
-        model = RandomForestRegressor(n_estimators=50, max_depth=10).fit(X_train, y_train)
-        #Initiate explainer 
-        explainer = RegressionExplainer(model, X_test, y_test)
-        #Append exlpaner to the list, so can be added to ExplainerHub
-        dblst.append(ExplainerDashboard(explainer,title="Model : "+data[i][0], name="db"+ str(i+1),description=data[i][1]+", Training Query : "+data[i][2]))
+        try:
+            #Generate model
+            model = RandomForestRegressor(n_estimators=50, max_depth=10).fit(X_train, y_train)
+            #Initiate explainer 
+            explainer = RegressionExplainer(model, X_test, y_test)
+            try:
+                #Append exlpaner to the list, so can be added to ExplainerHub
+                dblst.append(ExplainerDashboard(explainer,title="Model : "+data[i][0], name="db"+ str(i+1),description=data[i][1]+", Training Query : "+data[i][2]))
+            except:
+                print("An exception occurred while appending explainer HUB")    
+        except:
+            print("An exception occurred while generating RandomForestRegressor")    
+        
+
     #If Model type is classification
     elif data2[0][0] == 'classification':
         X_train, y_train, X_test, y_test = utility.get_model_train_test(data[i][2],data[i][3])
@@ -35,9 +43,16 @@ for i in range(len(data)):
         encoder = OrdinalEncoder()
         X_train = encoder.fit_transform(X_train)
         #Initiate explainer 
-        explainer = ClassifierExplainer(RandomForestClassifier().fit(X_train, y_train), X_test, y_test)
-        #Append exlpaner to the list, so can be added to ExplainerHub
-        dblst.append(ExplainerDashboard(explainer,title="Model : "+data[i][0], name="db"+ str(i+1),description=data[i][1]+", Training Query : "+data[i][2],bootstrap=dbc.themes.SLATE))
+        try:
+            explainer = ClassifierExplainer(RandomForestClassifier().fit(X_train, y_train), X_test, y_test)
+            try:
+                #Append exlpaner to the list, so can be added to ExplainerHub
+                dblst.append(ExplainerDashboard(explainer,title="Model : "+data[i][0], name="db"+ str(i+1),description=data[i][1]+", Training Query : "+data[i][2]))
+            except:
+                print("An exception occurred while appending explainer HUB")   
+        except:
+            print("An exception occurred while generating ClassifierExplainer")   
+    
     else:
         pass
     
