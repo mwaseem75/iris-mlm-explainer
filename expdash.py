@@ -2,9 +2,6 @@ from explainerdashboard.datasets import titanic_survive, titanic_fare
 from sklearn.ensemble import RandomForestClassifier,RandomForestRegressor
 from explainerdashboard import ClassifierExplainer, ExplainerDashboard, ExplainerHub, RegressionExplainer
 import dash_bootstrap_components as dbc
-from sklearn.preprocessing import OrdinalEncoder
-from sklearn.feature_extraction import FeatureHasher
-
 import utility
 
 #Establish connection with InterSystems IRIS Cloud
@@ -23,6 +20,7 @@ for i in range(len(data)):
     data2 = cur.fetchall()
     #if Model type is regression
     if data2[0][0] == 'regression':
+        #get splitted train and test data 
         X_train, y_train, X_test, y_test = utility.get_model_train_test(data2[0][0],data[i][2],data[i][3])
         # Select only numerical columns
         numerical_cols = [cname for cname in X_train.columns if X_train[cname].dtype in ['int64', 'float64']]
@@ -44,51 +42,29 @@ for i in range(len(data)):
 
     #If Model type is classification
     elif data2[0][0] == 'classification':
-        X_train, y_train, X_test, y_test = utility.get_model_train_test(data2[0][0],data[i][2],data[i][3])
-        #ord_enc = OrdinalEncoder()
-        #y_test = ord_enc.fit_transform(y_test)
-        #y_text = ord_enc.fit_transform(y_text)
-        #h = FeatureHasher()
-
-        #y_train = h.transform(y_train)
-        #y_test = h.transform(y_test)
-
-        #y_train[data[i][3]] = ord_enc.fit_transform(y_train[data[i][3]])
-        #y_test[data[i][3]] = ord_enc.fit_transform(y_test[data[i][3]])
-        
-        #Get train and test data
-        #encoder = OrdinalEncoder()
-        #y_train = encoder.fit_transform(y_train)
-        #y_yest = encoder.fit_transform(y_test)
-        #Initiate explainer 
-        #try:
-
-        #X_train, y_train, X_test, y_test = titanic_survive()
-        #X_train.to_csv("ctrainx.csv")        
-        #y_train.to_csv("ctrainy.csv")        
-        #numerical_cols = [cname for cname in X_train.columns if X_train[cname].dtype in ['int64', 'float64']]
-        #X_train = X_train[numerical_cols].copy()
-        #X_test = X_test[numerical_cols].copy()
-         # Select only numerical columns
-      
-        model = RandomForestClassifier().fit(X_train, y_train)
-        
-        explainer = ClassifierExplainer(model, X_test, y_test)
-
-        #    try:
-        #        #Append exlpaner to the list, so can be added to ExplainerHub
-        dblst.append(ExplainerDashboard(explainer,title="Model : "+data[i][0], name="db"+ str(i+1),description=data[i][1]+", Training Query : "+data[i][2]))
-        #    except:
-        #        print("An exception occurred while appending explainer HUB")   
-        #except:
-        #    print("An exception occurred while generating ClassifierExplainer")   
+        #get splitted train and test data 
+        X_train, y_train, X_test, y_test = utility.get_model_train_test(data2[0][0],data[i][2],data[i][3]) 
+        try:
+            #Generate model           
+            model = RandomForestClassifier().fit(X_train, y_train)
+            #Initiate explainer 
+            explainer = ClassifierExplainer(model, X_test, y_test)
+            try:
+                 #Append exlpaner to the list, so can be added to ExplainerHub
+                 dblst.append(ExplainerDashboard(explainer,title="Model : "+data[i][0], name="db"+ str(i+1),description=data[i][1]+", Training Query : "+data[i][2]))
+            except:
+                print("An exception occurred while appending explainer HUB")   
+        except:
+            print("An exception occurred while generating ClassifierExplainer")   
     
     else:
         pass
     
-#close connection
-cur.close() 
-connection.close()
+#close cursor and connection
+if cur:
+    cur.close() 
+if connection:
+    connection.close()
 #initate ExplanerHub by passing all the explaners
 hub = ExplainerHub(dblst, bootstrap=dbc.themes.MORPH, title="InterSystems IRIS Cloud Integrated ML explorer",description="Give your applications direct access to the advanced relational database capabilities of InterSystems IRIS® Data Platform without the burden of provisioning, configuring, and maintaining cloud infrastructure. The IRIS Cloud IntegratedML option lets you define and execute predictive models by applying automated functions directly from SQL, without requiring extensive machine learning expertise.")
 #Run application
