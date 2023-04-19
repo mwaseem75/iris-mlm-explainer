@@ -45,7 +45,7 @@ Repository already contains python virtual environment folder (venv) along with 
 All we need is to just activate the environment
 On Unix or MacOS:
 ```
-$ source venv/bin/activate
+$ source venv/Scripts/activate
 ```
 On Windows:
 ```
