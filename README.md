@@ -74,7 +74,7 @@ open USAHousingModelNotebook.ipynb notebook by clicking on it
 ![image](https://user-images.githubusercontent.com/18219467/232428806-89ba6cd3-8e49-4001-ae0d-f1f8e6873540.png)
 
 It will open the notebook
-![image](https://user-images.githubusercontent.com/18219467/232428992-0d0fe003-b368-46af-a031-495992d93268.png)
+![image](https://user-images.githubusercontent.com/18219467/233067990-cc24b4d2-3cce-4650-9f0e-d9e8f2418fee.png)
 
 **NOTE : Make sure to select venv kernal by selecting main menu Kernal>Change kernal>venv**, so that notebook will use virtual environment libraries
 
@@ -87,16 +87,18 @@ NOTE : Run the cells in sequence by just clicking the small arrow
 ![image](https://user-images.githubusercontent.com/18219467/232433366-f3457c94-1272-4613-8c06-37e4d107d07c.png)
 
 ## Step 6 : Create table and import data
-![image](https://user-images.githubusercontent.com/18219467/232434992-f519049b-2278-4e07-adbf-13fa35457bbd.png)
+![image](https://user-images.githubusercontent.com/18219467/233068671-d5655948-a6df-4dd4-9c05-4832d0091de2.png)
 
 ## Step 7 : Create Model
-![image](https://user-images.githubusercontent.com/18219467/232435694-7986ab85-1e49-4f1d-b7dc-95259c162206.png)
+![image](https://user-images.githubusercontent.com/18219467/233068824-6a257402-58e5-45e2-8f10-3b1b2588c758.png)
+
 
 ## Step 8 : Train Model
-![image](https://user-images.githubusercontent.com/18219467/232435922-2f84b59e-0f92-427c-b508-5e733353eadf.png)
+![image](https://user-images.githubusercontent.com/18219467/233068922-d5d5247e-5333-4393-a67d-17ffe3740577.png)
+
 
 ## Step 9 : Validate Model
-![image](https://user-images.githubusercontent.com/18219467/232436161-c7af4e06-8a70-4d2d-a0e9-3e90814d7051.png)
+![image](https://user-images.githubusercontent.com/18219467/233069090-99826b11-0a7f-48eb-b26c-d8f1df61cb82.png)
 ![image](https://user-images.githubusercontent.com/18219467/232436385-9df76a7c-fc0f-46d8-b5bf-3c062cc2b7e6.png)
 
 ## Step 10 : Do a Prediction
