@@ -113,10 +113,10 @@ python expdash.py
 
 Navigate to [http://localhost:8050/](http://localhost:8050/) to run the application
 
-![image](https://user-images.githubusercontent.com/18219467/232486771-ff43e208-c800-4c79-89b7-1e184f03279d.png)
+![image](https://user-images.githubusercontent.com/18219467/233049477-3c62aa02-952e-4ea1-8334-699f8c8eb215.png)
 
 
-Application will list our USAHousingPriceModel. Navigate to "go to dashboard" hyperlink to view model explainer
+Application will list all the trained models along with our USAHousingPriceModel. Navigate to "go to dashboard" hyperlink to view model explainer
 
 Feature Importances. Which features had the biggest impact?
 ![image](https://user-images.githubusercontent.com/18219467/232486985-1719d884-295c-4521-a5cd-85ac034eded9.png)
