@@ -2,6 +2,7 @@
 import intersystems_iris.dbapi._DBAPI as iris
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OrdinalEncoder
 import config
 
 def get_db_connection():
@@ -20,13 +21,17 @@ def get_cols(description):
         ds_cols.append(item[0])
     return ds_cols
 
-def get_model_train_test(model_query,perdict_col):
+def get_model_train_test(model_type,model_query,perdict_col):
     connection = get_db_connection()
     cur = connection.cursor()
     cur.execute(model_query)
     data = cur.fetchall()
-    #close connection
     df = pd.DataFrame (data = data, columns = get_cols(cur.description))
+    #convert categorical variable to numeric in case of model_type is classification
+    if model_type == "classification":
+        ord_enc = OrdinalEncoder()
+        df[perdict_col] = ord_enc.fit_transform(df[[perdict_col]])        
+
     X = df.drop(columns=[perdict_col])
     y = df[perdict_col]  
     # using the train test split function
