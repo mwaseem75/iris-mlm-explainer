@@ -23,13 +23,14 @@ We will follow the below steps to create and view the explainer dashboard of a m
 - Step 2 : Activate python virtual environment 
 - Step 3 : Set InterSystems Cloud SQL connection parameters
 - Step 4 : Running Jupyter notebook
-- Step 5 : Explore USA housing (for USA housing price Prediction)
-- Step 6 : Create table and import data
-- Step 7 : Create Model
-- Step 8 : Train Model
-- Step 9 : Validate Model
-- Step 10 : Do a Prediction
-- Step 11 : Explore the Explainer dashboard
+  - Step 4.1 : Explore USA housing (for USA housing price Prediction)
+  - Step 4.2 : Create table and import data
+  - Step 4.3 : Create Model
+  - Step 4.4 : Train Model
+  - Step 4.5 : Validate Model
+  - Step 4.6 : Predict Model
+- Step 5 : Run Web Application for prediction   
+- Step 6 : Explore the Explainer dashboard
 
 ## Step 1 : Close/git Pull the repo
 So Let us start with first Step
@@ -83,28 +84,42 @@ It will open the notebook
 NOTE : Run the cells in sequence by just clicking the small arrow
 ![image](https://user-images.githubusercontent.com/18219467/232431439-8aaa7eac-900b-4cc8-9cca-ec6a44bb7920.png)
 
-## Step 5 : Explore USA housing (for USA housing price Prediction)
+## Step 4.1 : Explore USA housing (for USA housing price Prediction)
 ![image](https://user-images.githubusercontent.com/18219467/232433366-f3457c94-1272-4613-8c06-37e4d107d07c.png)
 
-## Step 6 : Create table and import data
+## Step 4.2 : Create table and import data
 ![image](https://user-images.githubusercontent.com/18219467/233068671-d5655948-a6df-4dd4-9c05-4832d0091de2.png)
 
-## Step 7 : Create Model
+## Step 4.3 : Create Model
 ![image](https://user-images.githubusercontent.com/18219467/233068824-6a257402-58e5-45e2-8f10-3b1b2588c758.png)
 
 
-## Step 8 : Train Model
+## Step 4.4 : Train Model
 ![image](https://user-images.githubusercontent.com/18219467/233068922-d5d5247e-5333-4393-a67d-17ffe3740577.png)
 
 
-## Step 9 : Validate Model
+## Step 4.5 : Validate Model
 ![image](https://user-images.githubusercontent.com/18219467/233069090-99826b11-0a7f-48eb-b26c-d8f1df61cb82.png)
 ![image](https://user-images.githubusercontent.com/18219467/232436385-9df76a7c-fc0f-46d8-b5bf-3c062cc2b7e6.png)
 
-## Step 10 : Do a Prediction
+## Step 4.6 : Do a Prediction
 ![image](https://user-images.githubusercontent.com/18219467/232437235-7ba99b14-3f72-47ab-b644-fd995c37cca8.png)
 
-## Step 11 : Explore the Explainer dashboard
+## Step 5 : Run Web Application for prediction   
+Run the below command in virtual environment to start our main application
+```
+python app.py
+```
+![image](https://user-images.githubusercontent.com/18219467/233229144-4ecac12f-15b4-4318-a6ea-0ad6790038ae.png)
+
+Navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to run the application
+
+![image](https://user-images.githubusercontent.com/18219467/233230031-63c27a25-910c-4b16-9a5a-9466f2e57354.png)
+
+Enter Age of house, No of rooms, No of bedroom and Area population to get the prediction 
+
+
+## Step 6 : Explore the Explainer dashboard
 Finaly, run the below command in virtual environment to start our main application
 ```
 python expdash.py
