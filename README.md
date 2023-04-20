@@ -4,13 +4,16 @@
 # iris-mlm-explainer
 This web application connects to InterSystems Cloud SQL, displays a dashboard of all the trained models, and explains the workings of a fitted machine learning model. The dashboard provides interactive plots on model performance, feature importances, feature contributions to individual predictions, partial dependence plots, SHAP (interaction) values, visualization of individual decision trees, etc.
 
-The dashboard includes:
-- SHAP values (i.e. what is the contribution of each feature to each individual prediction?)
-- Permutation importance (how much does the model metric deteriorate when you shuffle a feature?)
-- Partial dependence plots (how does the model prediction change when you vary a single feature?)
-- For Random Forests and xgboost models: visualization of individual trees in the ensemble.
-- Plus for classifiers: precision plots, confusion matrix, ROC AUC plot, PR AUC plot, etc
-- For regression models: goodness-of-fit plots, residual plots, etc.
+The Application includes the following:
+- Jupyter Notebook to explore data, create, train, validate, and predict model
+- Web Application to view the Prediction
+- Web Application for explainer dashboard which includes the following:
+  - SHAP values (i.e. what is the contribution of each feature to each individual prediction?)
+  - Permutation importance (how much does the model metric deteriorate when you shuffle a feature?)
+  - Partial dependence plots (how does the model prediction change when you vary a single feature?)
+  - For Random Forests and xgboost models: visualization of individual trees in the ensemble.
+  - Plus for classifiers: precision plots, confusion matrix, ROC AUC plot, PR AUC plot, etc
+  - For regression models: goodness-of-fit plots, residual plots, etc.
 
 # Prerequisits
 - You should have an account with [InterSystems Cloud SQL](https://portal.sql-contest.isccloud.io/cloudservices). 
