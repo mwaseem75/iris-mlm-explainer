@@ -89,7 +89,7 @@ NOTE : Run the cells in sequence by just clicking the small arrow
 ![image](https://user-images.githubusercontent.com/18219467/232431439-8aaa7eac-900b-4cc8-9cca-ec6a44bb7920.png)
 
 ## Step 4.1 : Explore USA housing (for USA housing price Prediction)
-![image](https://user-images.githubusercontent.com/18219467/232433366-f3457c94-1272-4613-8c06-37e4d107d07c.png)
+![image](https://user-images.githubusercontent.com/18219467/233324394-ca5691b5-ef4e-4062-bb0e-612554d8e96c.png)
 
 ## Step 4.2 : Create table and import data
 ![image](https://user-images.githubusercontent.com/18219467/233068671-d5655948-a6df-4dd4-9c05-4832d0091de2.png)
