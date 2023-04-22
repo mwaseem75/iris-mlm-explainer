@@ -43,8 +43,8 @@ Create folder and Clone/git pull the repo into any local directory
 git clone https://github.com/mwaseem75/iris-mlm-explainer.git
 ```
 
-## Step 2 : Login to InterSystems Cloud SQL Service Portal
-Login to [InterSystems Cloud Service Portal](https://portal.sql-contest.isccloud.io/cloudservices)
+## Step 2 : Log in to InterSystems Cloud SQL Service Portal
+Log in to [InterSystems Cloud Service Portal](https://portal.sql-contest.isccloud.io/cloudservices)
 ![image](https://user-images.githubusercontent.com/18219467/233755660-7a9dcf01-927e-4d5d-a901-2ef018c33876.png)
 Select the running deployment
 ![image](https://user-images.githubusercontent.com/18219467/233755738-53ef3e59-c890-4d5b-8b7c-17fd0077fb3b.png)
@@ -52,54 +52,54 @@ Select the running deployment
 ## Step 2.1 : Add and Manage Files
 Click on Add and Manage Files
 ![image](https://user-images.githubusercontent.com/18219467/233757122-0a976333-c448-4ad4-9925-10794a1c08ab.png)
-Repo contains USA_Housing_tables_DDL.sql(DDL to create tables), USA_Housing_train.csv(Traning data) and USA_Housing_validate.csv(For validation) files under the datasets folder. Select upload button to add these files.
+Repo contains USA_Housing_tables_DDL.sql(DDL to create tables), USA_Housing_train.csv(training data), and USA_Housing_validate.csv(For validation) files under the datasets folder. Select the upload button to add these files.
 ![AddFiles](https://user-images.githubusercontent.com/18219467/233757254-826532d4-7c86-4f87-a124-9a8d14ca2069.JPG)
 
 ## Setp 2.2 : Import DDL and data files
-Click on Import files, then click on DDL or DML statemet(s) radio button, then click next button
+Click on Import files, then click on DDL or DML statement(s) radio button, then click the next button
 ![ImportDDL](https://user-images.githubusercontent.com/18219467/233757429-dde9ae1d-32ac-4417-97c5-f126c539a287.JPG)
-Click on Intersystems IRIS radio button and then click on next
+Click on Intersystems IRIS radio button and then click on the next button
 ![IsIRIS](https://user-images.githubusercontent.com/18219467/233757466-94af3c32-e248-40da-9045-d0c94675c2f2.JPG)
-Select USA_Housing_tables_DDL.sql file and then press import button
+Select USA_Housing_tables_DDL.sql file and then press the import files button
 ![ImportFileDDL](https://user-images.githubusercontent.com/18219467/233757496-2df03ecf-d038-42fb-9461-084b87c286f7.JPG)
-Click on Import to create the table
+Click on Import from the confirmation dialog to create the table
 ![importconfirm](https://user-images.githubusercontent.com/18219467/233757743-acd85bae-9fd9-449b-bbc8-856a5feaad90.jpg)
 ![importDone](https://user-images.githubusercontent.com/18219467/233757755-e976c16d-164c-42bd-a0d6-fabe322153cf.jpg)
 Click on SQL Query tools to verify that tables are created
 ![checkTblCreated](https://user-images.githubusercontent.com/18219467/233757934-a99b77ba-562b-4796-83c3-73f718e45d37.JPG)
 
 #### Import data files
-Click on Import files, then click on CSV data radio button, then click next button
+Click on Import files, then click on CSV data radio button, then click the next button
 ![csv1](https://user-images.githubusercontent.com/18219467/233757953-b322654d-c6b9-4fc7-96d8-02f5f41edfde.JPG)
-Select USA_Housing_train.csv file and click next button
+Select USA_Housing_train.csv file and click the next button
 ![csv2](https://user-images.githubusercontent.com/18219467/233757971-87734bf4-1d18-4a92-9491-5f491e51814c.JPG)
-Select USA_Housing_train.csv file from dropdownlist, check import rows as header row and Field names in header row match column names in selected table and click import files
+Select USA_Housing_train.csv file from the dropdown list, check import rows as a header row and Field names in header row match column names in selected table and click import files
 ![csv3](https://user-images.githubusercontent.com/18219467/233758084-ac6fa086-40b4-4a09-98d1-73e9d93b5f74.jpg)
-click on import in confirmation dialog
-![csv4](https://user-images.githubusercontent.com/18219467/233758167-cc4af63f-71a6-436c-bb83-f2a10b88069e.jpg)
-4000 rows should be copied 
+click on import in the confirmation dialog
+![csv4](https://user-images.githubusercontent.com/18219467/233758167-cc4af63f-71a6-436c-bb83-f2a10b88069e.jpg) click on import in the confirmation dialog
+Make sure 4000 rows are updated
 ![csv5](https://user-images.githubusercontent.com/18219467/233758188-15ecaf0f-bc32-4b25-8730-4f86645ada88.jpg)
-Do the same steps to import USA_Housing_validate.csv file which contain 1500 records
+Do the same steps to import USA_Housing_validate.csv file which contains 1500 records
 ![csv6](https://user-images.githubusercontent.com/18219467/233758219-d2f62c9f-01b9-48d3-a102-184b14ec46f0.jpg)
 
 ## Setp 2.3 : Create Model
 Click on IntegratedM tools and select Create Panel.
 
-Enter USAHousingPriceModel in Model Name field, Select usa_housing_train table and Price in field to predict dropdown. Click on create model button to create the model
+Enter USAHousingPriceModel in the Model Name field, Select usa_housing_train table and Price in the field to predict dropdown. Click on create model button to create the model
 ![createModel](https://user-images.githubusercontent.com/18219467/233758287-111e2a8e-12a9-4bc3-af29-6a752f2a30ab.JPG)
 
 ## Setp 2.4 : Train Model
-select Train Panel, Select USAHousingPriceModel from model to train dropdownlist and enter USAHousingPriceModel_t1 in train model name feild
+select Train Panel, Select USAHousingPriceModel from the model to train dropdownlist and enter USAHousingPriceModel_t1 in the train model name field
 ![TRAIN1](https://user-images.githubusercontent.com/18219467/233758471-e8e1779f-0cee-4131-9306-568c13465088.jpg)
 Model will be trained once Run Status completed
 ![TRAIN2](https://user-images.githubusercontent.com/18219467/233758563-629542da-01a0-4050-9a1f-79c947efba07.jpg)
 
 ## Setp 2.5 : Validate Model
-Select Validatge Panel, Select USAHousingPriceModel_t1 from Trained model to validate dropdownlist, select usa_houseing_validate from Table to validate model from dropdownlist and click on validate model button
+Select Validate Panel, Select USAHousingPriceModel_t1 from Trained model to validate dropdownlist, select usa_houseing_validate from Table to validate model from dropdownlist and click on validate model button
 ![image](https://user-images.githubusercontent.com/18219467/233758810-9891f2f1-0825-45f3-9e12-5ccae3000ec7.png)
 Click on show validation metrics to view metrics
 ![showValidation](https://user-images.githubusercontent.com/18219467/233758865-c20a0275-70aa-4af5-ba0f-1d7c153589c4.JPG)
-Click on chart icon to view Prediction VS Actual graph 
+Click on the chart icon to view the Prediction VS Actual graph
 ![validationChart](https://user-images.githubusercontent.com/18219467/233759007-49fd2bce-badc-4036-8c46-b72e4145b6d5.JPG)
 
 
