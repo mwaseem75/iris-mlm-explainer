@@ -68,12 +68,39 @@ Click on Import to create the table
 Click on SQL Query tools to verify that tables are created
 ![checkTblCreated](https://user-images.githubusercontent.com/18219467/233757934-a99b77ba-562b-4796-83c3-73f718e45d37.JPG)
 
-
-
+#### Import data files
 Click on Import files, then click on CSV data radio button, then click next button
 ![csv1](https://user-images.githubusercontent.com/18219467/233757953-b322654d-c6b9-4fc7-96d8-02f5f41edfde.JPG)
 Select USA_Housing_train.csv file and click next button
 ![csv2](https://user-images.githubusercontent.com/18219467/233757971-87734bf4-1d18-4a92-9491-5f491e51814c.JPG)
+Select USA_Housing_train.csv file from dropdownlist, check import rows as header row and Field names in header row match column names in selected table and click import files
+![csv3](https://user-images.githubusercontent.com/18219467/233758084-ac6fa086-40b4-4a09-98d1-73e9d93b5f74.jpg)
+click on import in confirmation dialog
+![csv4](https://user-images.githubusercontent.com/18219467/233758167-cc4af63f-71a6-436c-bb83-f2a10b88069e.jpg)
+4000 rows should be copied 
+![csv5](https://user-images.githubusercontent.com/18219467/233758188-15ecaf0f-bc32-4b25-8730-4f86645ada88.jpg)
+Do the same steps to import USA_Housing_validate.csv file which contain 1500 records
+![csv6](https://user-images.githubusercontent.com/18219467/233758219-d2f62c9f-01b9-48d3-a102-184b14ec46f0.jpg)
+
+## Setp 2.3 : Create Model
+Click on IntegratedM tools and select Create Panel.
+
+Enter USAHousingPriceModel in Model Name field, Select usa_housing_train table and Price in field to predict dropdown. Click on create model button to create the model
+![createModel](https://user-images.githubusercontent.com/18219467/233758287-111e2a8e-12a9-4bc3-af29-6a752f2a30ab.JPG)
+
+## Setp 2.4 : Train Model
+select Train Panel, Select USAHousingPriceModel from model to train dropdownlist and enter USAHousingPriceModel_t1 in train model name feild
+![TRAIN1](https://user-images.githubusercontent.com/18219467/233758471-e8e1779f-0cee-4131-9306-568c13465088.jpg)
+Model will be trained once Run Status completed
+![TRAIN2](https://user-images.githubusercontent.com/18219467/233758563-629542da-01a0-4050-9a1f-79c947efba07.jpg)
+
+## Setp 2.5 : Validate Model
+Select Validatge Panel, Select USAHousingPriceModel_t1 from Trained model to validate dropdownlist, select usa_houseing_validate from Table to validate model from dropdownlist and click on validate model button
+![image](https://user-images.githubusercontent.com/18219467/233758810-9891f2f1-0825-45f3-9e12-5ccae3000ec7.png)
+Click on show validation metrics to view metrics
+![showValidation](https://user-images.githubusercontent.com/18219467/233758865-c20a0275-70aa-4af5-ba0f-1d7c153589c4.JPG)
+Click on chart icon to view Prediction VS Actual graph 
+![validationChart](https://user-images.githubusercontent.com/18219467/233759007-49fd2bce-badc-4036-8c46-b72e4145b6d5.JPG)
 
 
 
@@ -152,11 +179,9 @@ Decision Trees, Displaying individual decision trees inside Random Forest
 
 
 ## Using Jupyter notebook to create,train,validate and predict ML model (OPTIONAL)
-We can also use jupyter notebook to create,train,validate and predict ML model
+We can also use jupyter notebook to create,train,validate and predict ML model if not created by using Cloud SQL Service Portal
 
-We will use USAHousingModelNotebook.ipynb notebook for next steps.
-
-Repo also contains Jupyter notebook. In order to run it, just run runnotebook.bat under venv environment
+Repo also contains USAHousingModelNotebook.ipynb Jupyter notebook. In order to run it, just run runnotebook.bat under venv environment
 ```
 runnotebook
 ```
@@ -176,26 +201,6 @@ It will open the notebook
 NOTE : Run the cells in sequence by just clicking the small arrow
 ![image](https://user-images.githubusercontent.com/18219467/232431439-8aaa7eac-900b-4cc8-9cca-ec6a44bb7920.png)
 
-## Explore USA housing (for USA housing price Prediction)
-![image](https://user-images.githubusercontent.com/18219467/233324394-ca5691b5-ef4e-4062-bb0e-612554d8e96c.png)
-
-## Create table and import data
-![image](https://user-images.githubusercontent.com/18219467/233068671-d5655948-a6df-4dd4-9c05-4832d0091de2.png)
-
-## Create Model
-![image](https://user-images.githubusercontent.com/18219467/233068824-6a257402-58e5-45e2-8f10-3b1b2588c758.png)
-
-
-## Train Model
-![image](https://user-images.githubusercontent.com/18219467/233068922-d5d5247e-5333-4393-a67d-17ffe3740577.png)
-
-
-## Validate Model
-![image](https://user-images.githubusercontent.com/18219467/233069090-99826b11-0a7f-48eb-b26c-d8f1df61cb82.png)
-![image](https://user-images.githubusercontent.com/18219467/232436385-9df76a7c-fc0f-46d8-b5bf-3c062cc2b7e6.png)
-
-## Do a Prediction
-![image](https://user-images.githubusercontent.com/18219467/232437235-7ba99b14-3f72-47ab-b644-fd995c37cca8.png)
 
 
 ## About Dataset
