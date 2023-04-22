@@ -4,7 +4,6 @@ This web application connects to InterSystems Cloud SQL to create, train, valida
 The dashboard provides interactive plots on model performance, feature importances, feature contributions to individual predictions, partial dependence plots, SHAP (interaction) values, visualization of individual decision trees, etc.
 
 The Application includes the following:
-- Jupyter Notebook to explore data, create, train, validate, and predict model
 - Web Application to view the Prediction
 - Web Application for explainer dashboard which includes the following:
   - SHAP values (i.e. what is the contribution of each feature to each individual prediction?)
