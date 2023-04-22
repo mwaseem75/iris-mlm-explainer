@@ -1,10 +1,13 @@
-![image](https://user-images.githubusercontent.com/18219467/233314974-71c44cf3-8abd-4f92-b550-9f5f578ac331.png)
 # iris-mlm-explainer
 This web application connects to InterSystems Cloud SQL to create, train, validate, and predict ML models, make Predictions and display a dashboard of all the trained models with an explanation of the workings of a fitted machine learning model.
 The dashboard provides interactive plots on model performance, feature importances, feature contributions to individual predictions, partial dependence plots, SHAP (interaction) values, visualization of individual decision trees, etc.
 
+
 The Application includes the following:
 - Web Application to view the Prediction
+
+![image](https://user-images.githubusercontent.com/18219467/233314974-71c44cf3-8abd-4f92-b550-9f5f578ac331.png)
+
 - Web Application for explainer dashboard which includes the following:
   - SHAP values (i.e. what is the contribution of each feature to each individual prediction?)
   - Permutation importance (how much does the model metric deteriorate when you shuffle a feature?)
@@ -12,9 +15,9 @@ The Application includes the following:
   - For Random Forests and xgboost models: visualization of individual trees in the ensemble.
   - Plus for classifiers: precision plots, confusion matrix, ROC AUC plot, PR AUC plot, etc
   - For regression models: goodness-of-fit plots, residual plots, etc.
-- Jupyter Notebook to explore data, create, train, validate, and predict model
-
+  
 ![](https://github.com/mwaseem75/iris-mlm-explorer/blob/main/irisMLMExp.gif)
+
 
 # Prerequisits
 - You should have an account with [InterSystems Cloud Service Portal](https://portal.sql-contest.isccloud.io/cloudservices). 
