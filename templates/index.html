@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html>
+{% extends 'material/base.html' %}
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>House Price Prediction</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
-    <script src='main.js'></script>
-</head>
 
-<body>
-    <div class="register_page">
-        <img src="{{url_for('static', filename='images/househdr.png')}}" align="middle" />          
+{% block content %}
+
+    <div class="container">
+        <img src="{{url_for('static', filename='images/househdr.png')}}" class="responsive-img" align="middle" /> 
+        <h2>USA House Price Prediction</h2>      
         <div class="form">
             <form method=post enctype=multipart/form-data>
-                Age of house: (1-10) <input type="number" name='age' value = {{age}}  required="true" min="1" max="10"><br>
-                No of Rooms: (2-11): <input type="number" name='rm' value = {{rm}} required="true" min="2" max="11"><br>
-                No of Bedroom: (1-7) <input type="number" name='brm' value = {{brm}} required="true" min="1" max="7"> <br>
-                Area Population: (3,000-70,000) <input type="number" name='population' value = {{population}} required="true" min="3000" max="70000"><br>
-                <input type="submit"  value="Predict"  class="button-3" style="background-color: #2ea44f;">
+                Enter Age of house: (1-10) <input type="number" name='age' value = {{age}}  required="true" min="1" max="10"><br>
+                Enter No of Rooms: (2-11): <input type="number" name='rm' value = {{rm}} required="true" min="2" max="11"><br>
+                Enter No of Bedroom: (1-7) <input type="number" name='brm' value = {{brm}} required="true" min="1" max="7"> <br>
+                Enter Area Population: (3,000-70,000) <input type="number" name='population' value = {{population}} required="true" min="3000" max="70000"><br>
+                <input type="submit"  value="Predict" class="btn blue darken-4" >
             </form>
-            <p> House Predicted Price: <b>{{pred}}</b></p>
+            <p> House Predicted Price: <h4>{{pred}}</h4></p>
         </div>
 
     </div>
-
-
-</body>
-
-</html>
+{% endblock %}
