@@ -63,51 +63,6 @@ Repo contains config.py file. Just open and set the parameters
 Put same values used in InterSystems Cloud SQL
 ![image](https://user-images.githubusercontent.com/18219467/232485432-4b100781-1127-45b0-b3d8-95570124d977.png)
 
-## Step 4 : Running Jupyter notebook
-Repo contains USA_Housing_train.csv and USA_Housing_validate.csv files under datasets folder, from which we will create tables and import data.
-
-We will use USAHousingModelNotebook.ipynb notebook for next steps.
-
-Repo also contains Jupyter notebook. In order to run it, just run runnotebook.bat under venv environment
-```
-runnotebook
-```
-![image](https://user-images.githubusercontent.com/18219467/232427181-21b2c7e3-3de8-40fb-8111-4b86a9042039.png)
-
-Navigate to [http://localhost:8888/](http://localhost:8888/) to run the notebook
-open USAHousingModelNotebook.ipynb notebook by clicking on it
-![image](https://user-images.githubusercontent.com/18219467/232428806-89ba6cd3-8e49-4001-ae0d-f1f8e6873540.png)
-
-It will open the notebook
-![image](https://user-images.githubusercontent.com/18219467/233067990-cc24b4d2-3cce-4650-9f0e-d9e8f2418fee.png)
-
-**NOTE : Make sure to select venv kernal by selecting main menu Kernal>Change kernal>venv**, so that notebook will use virtual environment libraries
-
-![image](https://user-images.githubusercontent.com/18219467/232429659-cb4366e9-c14d-41fd-8408-e8447cea4710.png)
-
-NOTE : Run the cells in sequence by just clicking the small arrow
-![image](https://user-images.githubusercontent.com/18219467/232431439-8aaa7eac-900b-4cc8-9cca-ec6a44bb7920.png)
-
-## Step 4.1 : Explore USA housing (for USA housing price Prediction)
-![image](https://user-images.githubusercontent.com/18219467/233324394-ca5691b5-ef4e-4062-bb0e-612554d8e96c.png)
-
-## Step 4.2 : Create table and import data
-![image](https://user-images.githubusercontent.com/18219467/233068671-d5655948-a6df-4dd4-9c05-4832d0091de2.png)
-
-## Step 4.3 : Create Model
-![image](https://user-images.githubusercontent.com/18219467/233068824-6a257402-58e5-45e2-8f10-3b1b2588c758.png)
-
-
-## Step 4.4 : Train Model
-![image](https://user-images.githubusercontent.com/18219467/233068922-d5d5247e-5333-4393-a67d-17ffe3740577.png)
-
-
-## Step 4.5 : Validate Model
-![image](https://user-images.githubusercontent.com/18219467/233069090-99826b11-0a7f-48eb-b26c-d8f1df61cb82.png)
-![image](https://user-images.githubusercontent.com/18219467/232436385-9df76a7c-fc0f-46d8-b5bf-3c062cc2b7e6.png)
-
-## Step 4.6 : Do a Prediction
-![image](https://user-images.githubusercontent.com/18219467/232437235-7ba99b14-3f72-47ab-b644-fd995c37cca8.png)
 
 ## Step 5 : Run Web Application for prediction   
 Run the below command in virtual environment to start our main application
@@ -159,6 +114,70 @@ Interactions Summary,Ordering features by shap interaction value
 
 Decision Trees, Displaying individual decision trees inside Random Forest
 ![image](https://user-images.githubusercontent.com/18219467/232488582-99b93bb2-5017-4670-a85b-27d19860cc92.png)
+
+
+
+
+## Using Jupyter notebook to create,train,validate and predict ML model (OPTIONAL)
+We can also use jupyter notebook to create,train,validate and predict ML model
+
+We will use USAHousingModelNotebook.ipynb notebook for next steps.
+
+Repo also contains Jupyter notebook. In order to run it, just run runnotebook.bat under venv environment
+```
+runnotebook
+```
+![image](https://user-images.githubusercontent.com/18219467/232427181-21b2c7e3-3de8-40fb-8111-4b86a9042039.png)
+
+Navigate to [http://localhost:8888/](http://localhost:8888/) to run the notebook
+open USAHousingModelNotebook.ipynb notebook by clicking on it
+![image](https://user-images.githubusercontent.com/18219467/232428806-89ba6cd3-8e49-4001-ae0d-f1f8e6873540.png)
+
+It will open the notebook
+![image](https://user-images.githubusercontent.com/18219467/233067990-cc24b4d2-3cce-4650-9f0e-d9e8f2418fee.png)
+
+**NOTE : Make sure to select venv kernal by selecting main menu Kernal>Change kernal>venv**, so that notebook will use virtual environment libraries
+
+![image](https://user-images.githubusercontent.com/18219467/232429659-cb4366e9-c14d-41fd-8408-e8447cea4710.png)
+
+NOTE : Run the cells in sequence by just clicking the small arrow
+![image](https://user-images.githubusercontent.com/18219467/232431439-8aaa7eac-900b-4cc8-9cca-ec6a44bb7920.png)
+
+## Explore USA housing (for USA housing price Prediction)
+![image](https://user-images.githubusercontent.com/18219467/233324394-ca5691b5-ef4e-4062-bb0e-612554d8e96c.png)
+
+## Create table and import data
+![image](https://user-images.githubusercontent.com/18219467/233068671-d5655948-a6df-4dd4-9c05-4832d0091de2.png)
+
+## Create Model
+![image](https://user-images.githubusercontent.com/18219467/233068824-6a257402-58e5-45e2-8f10-3b1b2588c758.png)
+
+
+## Train Model
+![image](https://user-images.githubusercontent.com/18219467/233068922-d5d5247e-5333-4393-a67d-17ffe3740577.png)
+
+
+## Validate Model
+![image](https://user-images.githubusercontent.com/18219467/233069090-99826b11-0a7f-48eb-b26c-d8f1df61cb82.png)
+![image](https://user-images.githubusercontent.com/18219467/232436385-9df76a7c-fc0f-46d8-b5bf-3c062cc2b7e6.png)
+
+## Do a Prediction
+![image](https://user-images.githubusercontent.com/18219467/232437235-7ba99b14-3f72-47ab-b644-fd995c37cca8.png)
+
+
+
+## About Dataset
+[USA Housing dataset](https://www.kaggle.com/datasets/vedavyasv/usa-housing) is taken from [Kaggle](https://www.kaggle.com/)<br> [LICENCE:Public Domain](https://docs.data.world/en/59261-59714-2--Common-license-types-for-datasets.html)
+
+USA_Housing dataset contains the following columns:
+
+- 'Avg. Area Income': Avg. The income of residents of the city house is located in.
+- 'Avg. Area House Age': Avg Age of Houses in the same city
+- 'Avg. Area Number of Rooms': Avg Number of Rooms for Houses in the same city
+- 'Avg. Area Number of Bedrooms': Avg Number of Bedrooms for Houses in the same city
+- 'Area Population': The population of city house is located in
+- 'Price': Price that the house sold at
+
 
 
 ## Credits
