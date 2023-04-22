@@ -60,9 +60,20 @@ Click on Import files, then click on DDL or DML statemet(s) radio button, then c
 ![ImportDDL](https://user-images.githubusercontent.com/18219467/233757429-dde9ae1d-32ac-4417-97c5-f126c539a287.JPG)
 Click on Intersystems IRIS radio button and then click on next
 ![IsIRIS](https://user-images.githubusercontent.com/18219467/233757466-94af3c32-e248-40da-9045-d0c94675c2f2.JPG)
-Click USA_Housing_tables_DDL.sql file and then press import button
+Select USA_Housing_tables_DDL.sql file and then press import button
 ![ImportFileDDL](https://user-images.githubusercontent.com/18219467/233757496-2df03ecf-d038-42fb-9461-084b87c286f7.JPG)
 Click on Import to create the table
+![importconfirm](https://user-images.githubusercontent.com/18219467/233757743-acd85bae-9fd9-449b-bbc8-856a5feaad90.jpg)
+![importDone](https://user-images.githubusercontent.com/18219467/233757755-e976c16d-164c-42bd-a0d6-fabe322153cf.jpg)
+Click on SQL Query tools to verify that tables are created
+![checkTblCreated](https://user-images.githubusercontent.com/18219467/233757934-a99b77ba-562b-4796-83c3-73f718e45d37.JPG)
+
+
+
+Click on Import files, then click on CSV data radio button, then click next button
+![csv1](https://user-images.githubusercontent.com/18219467/233757953-b322654d-c6b9-4fc7-96d8-02f5f41edfde.JPG)
+Select USA_Housing_train.csv file and click next button
+![csv2](https://user-images.githubusercontent.com/18219467/233757971-87734bf4-1d18-4a92-9491-5f491e51814c.JPG)
 
 
 
