@@ -6,7 +6,7 @@ The dashboard provides interactive plots on model performance, feature importanc
 The Application includes the following:
 - Web Application to view the Prediction
 
-![image](https://user-images.githubusercontent.com/18219467/233314974-71c44cf3-8abd-4f92-b550-9f5f578ac331.png)
+![image](https://user-images.githubusercontent.com/18219467/233764140-7cf45f17-9258-443e-9249-c9da42c1d550.png)
 
 - Web Application for explainer dashboard which includes the following:
   - SHAP values (i.e. what is the contribution of each feature to each individual prediction?)
@@ -34,9 +34,8 @@ We will follow the below steps to create and view the explainer dashboard of a m
   - Step 2.4 : Train Model
   - Step 2.5 : Validate Model  
 - Step 3 : Activate python virtual environment 
-- Step 4 : Set InterSystems Cloud SQL connection parameters
-- Step 5 : Run Web Application for prediction   
-- Step 6 : Explore the Explainer dashboard
+- Step 4 : Run Web Application for prediction   
+- Step 5 : Explore the Explainer dashboard
 
 ## Step 1 : Close/git Pull the repo
 So Let us start with first Step
@@ -119,15 +118,8 @@ On Windows:
 ```
 venv\scripts\activate
 ```
-## Step 4 : Set InterSystems Cloud SQL connection parameters
-Repo contains config.py file. Just open and set the parameters
-![image](https://user-images.githubusercontent.com/18219467/232424168-3fd4ce14-2a78-44bc-a42b-c65909d9696a.png)
 
-Put same values used in InterSystems Cloud SQL
-![image](https://user-images.githubusercontent.com/18219467/232485432-4b100781-1127-45b0-b3d8-95570124d977.png)
-
-
-## Step 5 : Run Web Application for prediction   
+## Step 4 : Run Web Application for prediction   
 Run the below command in virtual environment to start our main application
 ```
 python app.py
@@ -135,13 +127,18 @@ python app.py
 ![image](https://user-images.githubusercontent.com/18219467/233229144-4ecac12f-15b4-4318-a6ea-0ad6790038ae.png)
 
 Navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to run the application
+![image](https://user-images.githubusercontent.com/18219467/233764703-babc7f33-ddd6-4bd5-99b6-a1003567eff4.png)
 
-![image](https://user-images.githubusercontent.com/18219467/233230031-63c27a25-910c-4b16-9a5a-9466f2e57354.png)
+Put same values used in InterSystems Cloud SQL
+
+![image](https://user-images.githubusercontent.com/18219467/232485432-4b100781-1127-45b0-b3d8-95570124d977.png)
 
 Enter Age of house, No of rooms, No of bedroom and Area population to get the prediction 
+![image](https://user-images.githubusercontent.com/18219467/233764140-7cf45f17-9258-443e-9249-c9da42c1d550.png)
 
 
-## Step 6 : Explore the Explainer dashboard
+
+## Step 5 : Explore the Explainer dashboard
 Finaly, run the below command in virtual environment to start our main application
 ```
 python expdash.py
