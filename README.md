@@ -17,22 +17,21 @@ The Application includes the following:
 ![](https://github.com/mwaseem75/iris-mlm-explorer/blob/main/irisMLMExp.gif)
 
 # Prerequisits
-- You should have an account with [InterSystems Cloud SQL](https://portal.sql-contest.isccloud.io/cloudservices). 
+- You should have an account with [InterSystems Cloud Service Portal](https://portal.sql-contest.isccloud.io/cloudservices). 
 - You should have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed locally.
 - You should have [Python3](https://www.python.org/downloads/) installed locally. 
 
 # Getting Started
 We will follow the below steps to create and view the explainer dashboard of a model :
 - Step 1 : Close/git Pull the repo
-- Step 2 : Activate python virtual environment 
-- Step 3 : Set InterSystems Cloud SQL connection parameters
-- Step 4 : Running Jupyter notebook
-  - Step 4.1 : Explore USA housing (for USA housing price Prediction)
-  - Step 4.2 : Create table and import data
-  - Step 4.3 : Create Model
-  - Step 4.4 : Train Model
-  - Step 4.5 : Validate Model
-  - Step 4.6 : Predict Model
+- Step 2 : Login to InterSystems Cloud SQL Service Portal
+  - Step 2.1 : Add and Manage Files
+  - Step 2.2 : Import DDL and data files
+  - Step 2.3 : Create Model
+  - Step 2.4 : Train Model
+  - Step 2.5 : Validate Model  
+- Step 3 : Activate python virtual environment 
+- Step 4 : Set InterSystems Cloud SQL connection parameters
 - Step 5 : Run Web Application for prediction   
 - Step 6 : Explore the Explainer dashboard
 
@@ -44,7 +43,30 @@ Create folder and Clone/git pull the repo into any local directory
 git clone https://github.com/mwaseem75/iris-mlm-explainer.git
 ```
 
-## Step 2 : Activate python virtual environment 
+## Step 2 : Login to InterSystems Cloud SQL Service Portal
+Login to [InterSystems Cloud Service Portal](https://portal.sql-contest.isccloud.io/cloudservices)
+![image](https://user-images.githubusercontent.com/18219467/233755660-7a9dcf01-927e-4d5d-a901-2ef018c33876.png)
+Select the running deployment
+![image](https://user-images.githubusercontent.com/18219467/233755738-53ef3e59-c890-4d5b-8b7c-17fd0077fb3b.png)
+
+## Step 2.1 : Add and Manage Files
+Click on Add and Manage Files
+![image](https://user-images.githubusercontent.com/18219467/233757122-0a976333-c448-4ad4-9925-10794a1c08ab.png)
+Repo contains USA_Housing_tables_DDL.sql(DDL to create tables), USA_Housing_train.csv(Traning data) and USA_Housing_validate.csv(For validation) files under the datasets folder. Select upload button to add these files.
+![AddFiles](https://user-images.githubusercontent.com/18219467/233757254-826532d4-7c86-4f87-a124-9a8d14ca2069.JPG)
+
+## Setp 2.2 : Import DDL and data files
+Click on Import files, then click on DDL or DML statemet(s) radio button, then click next button
+![ImportDDL](https://user-images.githubusercontent.com/18219467/233757429-dde9ae1d-32ac-4417-97c5-f126c539a287.JPG)
+Click on Intersystems IRIS radio button and then click on next
+![IsIRIS](https://user-images.githubusercontent.com/18219467/233757466-94af3c32-e248-40da-9045-d0c94675c2f2.JPG)
+Click USA_Housing_tables_DDL.sql file and then press import button
+![ImportFileDDL](https://user-images.githubusercontent.com/18219467/233757496-2df03ecf-d038-42fb-9461-084b87c286f7.JPG)
+Click on Import to create the table
+
+
+
+## Step 3 : Activate python virtual environment 
 Repository already contains python virtual environment folder (venv) along with all the required libraries.
 
 All we need is to just activate the environment
@@ -56,7 +78,7 @@ On Windows:
 ```
 venv\scripts\activate
 ```
-## Step 3 : Set InterSystems Cloud SQL connection parameters
+## Step 4 : Set InterSystems Cloud SQL connection parameters
 Repo contains config.py file. Just open and set the parameters
 ![image](https://user-images.githubusercontent.com/18219467/232424168-3fd4ce14-2a78-44bc-a42b-c65909d9696a.png)
 
@@ -165,7 +187,6 @@ NOTE : Run the cells in sequence by just clicking the small arrow
 ![image](https://user-images.githubusercontent.com/18219467/232437235-7ba99b14-3f72-47ab-b644-fd995c37cca8.png)
 
 
-
 ## About Dataset
 [USA Housing dataset](https://www.kaggle.com/datasets/vedavyasv/usa-housing) is taken from [Kaggle](https://www.kaggle.com/)<br> [LICENCE:Public Domain](https://docs.data.world/en/59261-59714-2--Common-license-types-for-datasets.html)
 
@@ -177,7 +198,7 @@ USA_Housing dataset contains the following columns:
 - 'Avg. Area Number of Bedrooms': Avg Number of Bedrooms for Houses in the same city
 - 'Area Population': The population of city house is located in
 - 'Price': Price that the house sold at
-
+NOTE: Column Name are modified and Id column is added in the dataset
 
 
 ## Credits
