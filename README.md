@@ -12,6 +12,7 @@ The Application includes the following:
   - For Random Forests and xgboost models: visualization of individual trees in the ensemble.
   - Plus for classifiers: precision plots, confusion matrix, ROC AUC plot, PR AUC plot, etc
   - For regression models: goodness-of-fit plots, residual plots, etc.
+- Jupyter Notebook to explore data, create, train, validate, and predict model
 
 ![](https://github.com/mwaseem75/iris-mlm-explorer/blob/main/irisMLMExp.gif)
 
